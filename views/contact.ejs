@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<title>HTML Tutorial</title>
+
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script>
+	$(function(){
+		$("#myform").submit(function(){
+			var pass = true;
+			if($("[name='name_txt']").val() == ""){
+				$("[name='name_txt']").focus();
+				alert("กรุณากรอกชื่อ");
+				pass = false;
+			} else if($("[name='email_txt']").val() == ""){
+				$("[name='email_txt']").focus();
+				alert("กรุณากรอกอีเมล์");
+				pass = false;
+			} else if($("[name='message_txt']").val() == ""){
+				$("[name='message_txt']").focus();
+				alert("กรุณากรอกรายละเอียดเพิ่มเติม");
+				pass = false;
+			}
+		
+			return pass;
+		});
+	});
+</script>
+<body>
+
+
+<div class="wrapper">
+	<div class="header">
+		<img class="logo" src="images/logo.png" />
+		<span class="logo-desc">Myweb</span>
+	</div>
+	<div class="content">
+		<div class="left">
+			<span>
+				<ul class="list">
+					<li><a href="/">หน้าแรก</a></li>
+					<li><a href="/product">สินค้า</a></li>
+					<li><a href="/about">เกี่ยวกับเรา</a></li>
+					<li><a href="/contact">ติดต่อเรา</a></li>
+				</ul>
+			</span>
+		</div>
+		<div class="right">
+				
+				<h1>Contact</h1>
+
+				<form id="myform" method="post" action="/contact/save" enctype="multipart/form-data">
+					<div class="form-wrap">
+						<div class="form-row">
+							<input name="name_txt" type="text" value="" placeholder="Name" />	
+						</div>
+						<div class="form-row">
+							<input name="email_txt" type="text" value="" placeholder="Email" />	
+						</div>
+						<div class="form-row">
+							<textarea name="message_txt" placeholder="Message"></textarea>
+						</div>
+						<div class="form-row">
+							<input name="file1" type="file" value="" />	
+						</div>
+						<div class="form-row">
+							<input type="submit" value="Send" />
+						</div>
+					</div>	
+				</form>
+				
+
+
+
+		</div>
+	</div>
+	<div class="footer">
+		<span>Footer</span>
+	</div>
+</div>
+
+</body>
+</html>

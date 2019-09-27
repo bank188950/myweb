@@ -1,0 +1,85 @@
+body {
+	color: #333;
+	margin: 0;
+	padding: 0;
+}
+
+.logo {
+	width: 60px;
+	vertical-align: middle;
+	margin-left: 20px;
+	margin-top: 20px;
+}
+
+.logo-desc {
+	margin-left: 10px;
+}
+
+.wrapper {
+	width: 800px;
+	margin: 0 auto;
+}
+
+.header {
+	height: 100px;
+	background: #5ECBFF;
+}
+
+.content:after {
+	content: ".";
+	display: block;
+	clear: both;
+	height: 0;
+	line-height: 0;
+	visibility: hidden;
+}
+
+.left {
+	float: left;
+	width: 300px;
+}
+
+.right {
+	float: left;
+	width: 500px;
+}
+
+.footer {
+	background: #9F9F9F;
+	height: 50px;
+	margin-top: 50px;
+}
+
+.list a {
+	text-decoration: none;
+}
+
+.box {
+	margin-top: 20px;
+} 
+
+.box a {
+	text-decoration: none; 
+}
+
+.box .title {
+	color: #333;
+	font-size: 16px;
+	font-weight: bold;
+	display: block;
+}
+
+.box .desc {
+	color: #333;
+	font-size: 14px;
+	font-weight: bold;
+	display: block;
+}
+
+.box .pic {
+	width: 300px;
+}
+
+.form-row {
+	margin-top: 10px;
+}
